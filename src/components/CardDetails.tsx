@@ -27,6 +27,20 @@ export function CardDetails({
           {title}
         </Text>
       </HStack>
+
+      {
+        !!description && <Text color="gray.100" fontSize="md">{description}</Text>
+      }
+
+      {children}
+      {
+        !!footer && <Box borderTopWidth={1} textDecorationColor="white" borderTopColor="gray.700">
+
+          <Text color="gray.300" mt={1} fontSize="sm">
+            {footer}
+          </Text>
+        </Box>
+      }
     </VStack>
   );
 }
